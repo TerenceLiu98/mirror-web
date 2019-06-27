@@ -1,0 +1,46 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: 清华大学开源软件镜像站
+brand: Tsinghua Open Source Mirrors
+baseurl: "" # the subpath of your site, e.g. /blog
+permalink: "/:categories/:title/"
+url: "https://mirrors.tuna.tsinghua.edu.cn"
+
+# Build settings
+highlighter: rouge
+markdown: kramdown
+kramdown:
+    input: GFM
+    hard_wrap: false
+
+
+sass:
+    sass_dir: static/css
+
+gems:
+    - jekyll-babel
+    - jekyll-sitemap
+
+babel_js_extensions: 'es6'
+
+exclude: [Gemfile, Gemfile.lock, README.md, gen_robot.sh, vendor, geninfo/, gen_robot.sh, gen_desc.py, Dockerfile*]
+
+# Content Related
+new_mirrors:
+    - gnu-alpha
+    - mxlinux
+    - mxlinux-isos
+    - armbian
+    - armbian-releases
+    - rustup
+    - nix
+    - dart-pub
+    - flutter
+
+# vim: ts=2 sts=2 sw=2 expandtab

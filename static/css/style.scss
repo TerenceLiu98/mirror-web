@@ -1,0 +1,266 @@
+---
+---
+/*	################################################################
+
+Author: Carlos Alvarez
+URL: http://alvarez.is
+
+Project Name: SOLID - Bootstrap 3 Theme
+Version: 1.0
+URL: http://alvarez.is
+
+################################################################# */
+
+$color_thu_purple: #82318E;
+$color_light_grey: #888;
+$color_grey: #555;
+$color_primary: $color_thu_purple;
+$color_primary_light: #d8aff6;
+$color_primary_rgb: 92,48,125;
+$color_secondary: #384452;
+$color_link: #088acb;
+$color_link_hover: #62bbe7;
+$color_footer_heading: #ffffff;
+$color_footer_content: #bfc9d3;
+$color_navbar_bg: #d3d3d3;
+$font_default: 'Lato', 'Hiragino Sans GB', 'Source Han Sans CN', 'WenQuanYi Zen Hei', 'WenQuanYi Micro Hei', '微软雅黑', sans-serif;
+$font_local: 'Hiragino Sans GB', 'Source Han Sans CN', 'WenQuanYi Zen Hei', 'WenQuanYi Micro Hei', '微软雅黑', sans-serif;
+
+@import
+	"Lato",
+	"structure",
+	"bootstrap-mod",
+	"syntax-highlighting";
+
+#thu-alert {
+	padding-left: 50px;
+	position: relative;
+	.glyphicon {
+		font-size: 30px;
+		left: 10px;
+		top: 20px;
+		position: absolute;
+	}
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	min-height: 100%;
+}
+
+#headerwrap {
+	padding-top: 40px;
+	padding-bottom: 0px;
+
+	h1 {
+		color: $color_primary ;
+		margin-bottom: 15px;
+	}
+	h3, h5 {
+		color: $color_primary ;
+		font-weight: 400;
+		margin-top: 10px;
+	}
+	.img-responsive {
+		margin: 0 auto;
+	}
+}
+
+.status-fail, .status-failed, .status-paused {
+	background-color: #fff4e3;
+}
+.status-syncing {
+	background-color: #e3fffd;
+}
+
+#mirrors {
+	tbody {
+		tr:hover {
+			background-color: #e0f3fc;
+		}
+		td {
+			padding: 4px 8px;
+			border-top: none;
+		}
+		font-size: 12pt;
+		.label.label-new {
+			padding: .1em .2em;
+			vertical-align: 40%;
+			text-shadow: 1px 1px #888;
+			background-color: #3aa0e6;
+		}
+		.label.label-status {
+			vertical-align: 20%;
+			margin-left: .5em;
+		}
+		.fa-question-circle {
+			color: #234961;
+		}
+	}
+	#news {
+		li > a {
+			color: $color_secondary;
+		}
+	}
+	#download-link {
+		margin-bottom: 1em;
+	}
+}
+#isoModal {
+	.nav-tabs {
+		margin-bottom: .5em;
+	}
+}
+
+#status-page {
+	.thead {
+		font-weight: bold;
+	}
+	#mirror-list {
+		:hover {
+			background-color: #e0f3fc;
+		}
+	}
+}
+
+#help-page {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+#news-page {
+	article {
+		.meta {
+			color: $color_grey;
+		}
+	}
+	.fa-user {
+		font-family: #{$font_default}, 'FontAwesome';
+	}
+}
+
+/* Footer */
+#footerwrap {
+	color: $color_footer_content;
+	margin-top: 100px;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background: $color_secondary;
+	p {
+		color: $color_footer_content;
+	}
+	h4 {
+		color: $color_footer_heading;
+	}
+	i, i:hover, a, a:hover {
+		color: $color_footer_content;
+	}
+}
+
+#footerwrap.tuna-foot-1 {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+#footerwrap.tuna-foot-2 {
+	visibility: hidden;
+}
+
+.spacing {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+.vbottom {
+    display: inline-block;
+    vertical-align: bottom;
+    float: none;
+}
+.text-right-xs {
+    text-align: right;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .text-right-sm {
+        text-align: right;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .text-right-md {
+        text-align: right;
+    }
+		.table.flat-md {
+			td,tr,th {
+				float: none;
+			}
+			td:before, th:before, td:after, th:after, tr:before, tr:after {
+				content: none;
+			}
+			td:nth-child(odd) {
+				display: none;
+			}
+		}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .text-right-lg {
+        text-align: right;
+    }
+}
+
+@media (max-width: 992px) {
+    .table.flat-md {
+        display: block;
+				td,th,tr,tbody,thead {
+					display: block;
+				}
+				td,th {
+					border-style: none;
+				}
+				tr {
+					border-bottom: 1px solid #ddd;
+				}
+				tr:first-of-type {
+					border-top: 1px solid #ddd;
+				}
+				td,th[class*="col-"] {
+					float: left;
+					position: relative;
+				}
+				td:nth-child(odd) {
+					text-align: right;
+					font-weight: bold;
+				}
+    }
+}
+
+#search {
+    float: right;
+    line-height: 18px;
+    padding: 8px;
+    border: 1px solid #e3e3e3;
+    margin-top: 20px;
+    margin-right: 10px;
+    max-width: 240px;
+    height: 30px;
+    font-size: 16px;
+}
+
+#mirror-title {
+    float: left;
+}
